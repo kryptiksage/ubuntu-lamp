@@ -1,5 +1,5 @@
 # ubuntu-lamp
-Assignment for making a LAMP server in a container using DockerFile
+Assignment for making a LAMP server in an Ubuntu container using DockerFile
 ## To run container
 ```
 docker run -p 80:8080 -d --name <container-name> <image-id>
