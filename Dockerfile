@@ -8,9 +8,10 @@ apache2 \
 php \
 mysql-server
 COPY index.php /var/www/html/index.php
+COPY hello-world.php /var/www/html/hello-world.php
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN service mysql start
 RUN a2enmod rewrite
 RUN service apache2 start
 CMD apachectl -D FOREGROUND
 EXPOSE 80
-EXPOSE 443
